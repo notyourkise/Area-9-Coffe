@@ -29,7 +29,7 @@ const data: Testimonial[] = [
 
 export function Testimonials() {
   return (
-    <section className="section-padding" id="testimoni">
+    <section className="section-padding fade-top" id="testimoni">
       <motion.div
         className="container-responsive"
         variants={staggerContainer(0.14)}

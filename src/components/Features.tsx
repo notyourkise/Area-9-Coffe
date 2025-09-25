@@ -47,7 +47,11 @@ export function Features() {
   const yHeading = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]); // slightly stronger for heading block
 
   return (
-    <section ref={sectionRef} className="section-padding relative" id="tentang">
+    <section
+      ref={sectionRef}
+      className="section-padding relative fade-top fade-bottom"
+      id="tentang"
+    >
       {/* Background image & layered parallax */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"

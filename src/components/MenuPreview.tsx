@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { fadeInUp, staggerContainer } from "./motion";
 
 interface MenuItem {
@@ -45,8 +46,28 @@ const items: MenuItem[] = [
 ];
 
 export function MenuPreview() {
+  const ref = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  // Parallax translate for background image (subtle)
+  const yBg = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
   return (
-    <section className="section-padding" id="menu">
+    <section
+      className="section-padding relative overflow-hidden fade-bottom"
+      id="menu"
+      ref={ref}
+    >
+      <motion.div
+        aria-hidden
+        style={{ y: yBg }}
+        className="pointer-events-none absolute inset-0 opacity-[0.28] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
+      >
+        <div className="absolute inset-0 bg-[url('/beans-coffe.webp')] bg-cover bg-center" />
+        {/* Overlay tint (lebih terang) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f0d0b]/50 via-[#0f0d0b]/35 to-[#0f0d0b]/55" />
+      </motion.div>
       <motion.div
         className="container-responsive"
         variants={staggerContainer(0.1)}
@@ -65,7 +86,7 @@ export function MenuPreview() {
               atau sekadar menikmati momen.
             </p>
           </div>
-          <a href="#pesan" className="btn-secondary w-fit">
+          <a href="#menu" className="btn-secondary w-fit">
             Lihat Semua Menu
           </a>
         </motion.div>

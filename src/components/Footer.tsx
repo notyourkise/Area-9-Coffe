@@ -1,3 +1,5 @@
+// Map embed removed per request
+
 export function Footer() {
   return (
     <footer className="pt-20 pb-12 bg-[#171310] mt-10" id="lokasi">
@@ -17,9 +19,21 @@ export function Footer() {
               Kontak
             </h4>
             <ul className="space-y-2 text-sm text-neutral-400">
-              <li>Jl. Contoh No. 123</li>
-              <li>Jakarta</li>
-              <li>WhatsApp: 0812‑3456‑7890</li>
+              <li>Jl. Sei Wain KM. 15</li>
+              <li>Cluster D Carjoe No. A9</li>
+              <li>Balikpapan</li>
+              <li>WhatsApp: 0851-8319-0809</li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/R945EpuKHmfQx2jR9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#c48952] hover:text-[#e0a873] transition-colors inline-flex items-center gap-1"
+                >
+                  <span className="inline-block h-[5px] w-[5px] rounded-full bg-[#c48952]" />
+                  Lihat di Google Maps
+                </a>
+              </li>
             </ul>
           </div>
           <div>
@@ -27,24 +41,40 @@ export function Footer() {
               Jam Buka
             </h4>
             <ul className="space-y-2 text-sm text-neutral-400">
-              <li>Sen–Jum: 08.00–22.00</li>
-              <li>Sab–Min: 09.00–23.00</li>
+              <li>Sen–Sab: 13.00 – 22.00</li>
+              <li>Minggu: Tutup</li>
             </ul>
           </div>
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide mb-4 text-neutral-300">
               Ikuti Kami
             </h4>
-            <div className="flex gap-3 text-sm">
-              <a href="#" className="text-neutral-400 hover:text-white">
-                Instagram
+            <div className="flex items-center gap-5">
+              <a
+                href="https://www.instagram.com/areasembilan.kopi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                aria-label="Instagram Area9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-white transition-colors text-xl"
+              >
+                <i className="fa-brands fa-instagram" />
               </a>
-              <a href="#" className="text-neutral-400 hover:text-white">
-                TikTok
+              <a
+                href="http://wa.me/6285183190809"
+                aria-label="WhatsApp Area9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-white transition-colors text-xl"
+              >
+                <i className="fa-brands fa-whatsapp" />
               </a>
-              <a href="#" className="text-neutral-400 hover:text-white">
-                X
-              </a>
+              <img
+                src="/logo.png"
+                alt="Logo Area9 Coffee"
+                className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity select-none"
+                draggable={false}
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

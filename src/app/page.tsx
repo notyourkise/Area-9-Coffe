@@ -1,9 +1,12 @@
 import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
-import { Features } from "../components/Features";
 import { MenuPreview } from "../components/MenuPreview";
+import { DividerHeroMenu } from "../components/DividerHeroMenu";
+import { About } from "../components/About";
+import { Features } from "../components/Features";
 import { Testimonials } from "../components/Testimonials";
-import { CtaBanner } from "../components/CtaBanner";
+import { RainySection } from "../components/RainySection";
+import { ThankYou } from "../components/ThankYou";
 import { Footer } from "../components/Footer";
 
 export default function Home() {
@@ -12,10 +15,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <DividerHeroMenu />
         <MenuPreview />
-        <Testimonials />
-        <CtaBanner />
+        <About />
+        <Features />
+  <Testimonials />
+  <RainySection />
+  <ThankYou />
       </main>
       <Footer />
     </>

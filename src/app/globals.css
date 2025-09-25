@@ -249,6 +249,40 @@ p {
   }
 }
 
+/* Section fade transition helpers */
+.fade-top,
+.fade-bottom {
+  position: relative;
+}
+.fade-top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, #0f0d0b 0%, rgba(15, 13, 11, 0) 100%);
+}
+.fade-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  pointer-events: none;
+  background: linear-gradient(to top, #0f0d0b 0%, rgba(15, 13, 11, 0) 100%);
+}
+@media (min-width: 768px) {
+  .fade-top::before {
+    height: 160px;
+  }
+  .fade-bottom::after {
+    height: 180px;
+  }
+}
+
 /* Button subtle glow using pseudo element (applied when parent has .btn-primary.glow) */
 .btn-primary.glow::after {
   content: "";
