@@ -137,6 +137,7 @@ export function Features() {
         >
           {features.map((f) => (
             <motion.div
+              key={f.title}
               className="card p-6 flex flex-col will-change-transform backdrop-blur-[2px]"
               variants={fadeInUp}
               whileHover={subtleHoverCard.whileHover}

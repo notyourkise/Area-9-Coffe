@@ -68,13 +68,17 @@ export function Footer() {
               >
                 <i className="fa-brands fa-whatsapp" />
               </a>
-              <img
-                src="/logo.png"
-                alt="Logo Area9 Coffee"
-                className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity select-none"
-                draggable={false}
-                loading="lazy"
-              />
+              <span className="relative h-10 w-10 select-none opacity-80 hover:opacity-100 transition-opacity">
+                <img
+                  src="/logo.png"
+                  alt="Logo Area9 Coffee"
+                  className="h-full w-full object-contain"
+                  draggable={false}
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
+              </span>
             </div>
           </div>
         </div>

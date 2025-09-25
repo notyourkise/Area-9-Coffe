@@ -14,7 +14,7 @@ type Listener = (all: UserTestimonial[]) => void;
 const STORAGE_KEY = "area9_user_testimonials_v1";
 
 let testimonials: UserTestimonial[] = [];
-let listeners: Set<Listener> = new Set();
+const listeners: Set<Listener> = new Set();
 
 function load() {
   if (typeof window === "undefined") return;
